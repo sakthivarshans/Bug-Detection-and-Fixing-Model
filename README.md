@@ -58,7 +58,7 @@ python
 
 This loads the Qwen2.5-Coder model and tokenizer. 
 
-  Load the load_qwen_model.py to install the model in your computer 
+# Load the load_qwen_model.py to install the model in your computer 
 
 🔹 Step 2: Run the Interface 
 Use the command below to start the web UI: 
