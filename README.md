@@ -1,88 +1,102 @@
-#  Bug Detection and Fixing AI Model
+🐞 Bug Detection and Fixing AI Model
+Welcome to the Bug Detection and Fixing AI project! This project uses a powerful LLM (Qwen2.5-Coder-1.5B) to automatically detect and fix code bugs using artificial intelligence.
 
-This project is an AI-powered tool for automatically detecting and fixing bugs in code using Qwen2.5-Coder-1.5B-Instruct, a lightweight Large Language Model (LLM) designed for coding tasks. It also features a simple graphical user interface (GUI) that allows users to input buggy code and receive corrected output.
+Whether you’re a beginner or a developer, this guide will walk you through everything — from setup to launching the app.
 
+📌 Project Highlights
+✅ Detects syntax, logical, and structural bugs
 
+🛠️ Fixes bugs using trained AI
 
+🧠 Based on Qwen2.5-Coder-1.5B-Instruct
 
-## 🧠 What It Does
+💻 Easy-to-use Graphical Interface (Gradio)
 
-- Accepts buggy code as input (Python syntax).
-- Uses the Qwen model to understand and detect the bug.
-- Fixes it and provides the corrected version of the code.
-- Shows the output in a **Graphical User Interface (GUI)** built using **Gradio**.
-- The GUI runs on a local server (IP address will be shown) and can be accessed via a web browser or Android app.
+📊 Supports Python source code
 
+🐍 Works offline in VS Code, or you can host it on Hugging Face
 
-## 💻 How It Works (Flow)
-
-1. `load_qwen_model.py` 
-   Loads the Qwen2.5 model and tokenizer from Hugging Face.
-
-2. `bug_detector.py`  
-   Contains the logic to:
-   - Accept input code.
-   - Generate a response from the model.
-   - Return the corrected code.
-
-3. `ui.py` 
-   Launches a GUI using Gradio.  
-   - Paste your buggy code.
-   - Click “Submit”.
-   - View the fixed version below.
-
----
-
-## 🚀 How to Run the Project (Step-by-Step)
-
-### 🛠️ 1. Clone the Repository
+📂 Project Structure
 bash
-```git clone https://github.com/your-username/Bug-Detection-and-Fixing-Model.git```
-```cd Bug-Detection-and-Fixing-Model```
+Copy
+Edit
+Bug-Detection-and-Fixing-Model/
+│
+├── load_qwen_model.py     # Loads the Qwen2.5 model
+├── bug_detector.py        # Logic to detect and fix bugs
+├── app.py                 # Gradio UI (entry point)
+├── source_code            # Folder with code examples or dataset
+├── requirements.txt       # Python packages required
+├── README.md              # This file
+└── .venv/ (optional)      # Your virtual environment
 
-Create a Virtual Environment (Optional but recommended)
-```python -m venv .venv```
-```.\.venv\Scripts\activate```    # On Windows
+ I suggest you to use the source code as second option use the other code like the independent modules and run the model.
+ 
+⚙️ How to Set Up (Run Locally)
+1. 📥 Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/your-username/Bug-Detection-and-Fixing-Model.git
+cd Bug-Detection-and-Fixing-Model
+2. 🐍 Create & Activate Virtual Environment
+bash
+Copy
+Edit
+# Windows
+python -m venv .venv
+.venv\Scripts\activate
 
-Install all Dependencies
-```pip install -r requirements.txt```
-Make sure you have transformers, torch, gradio, accelerate, and huggingface_hub.
+# Mac/Linux
+python3 -m venv .venv
+source .venv/bin/activate
+3. 📦 Install Requirements
+bash
+Copy
+Edit
+pip install -r requirements.txt
+🚀 How to Run the Model
+🔹 Step 1: Load the Model
+No need to run this manually — it's done automatically inside app.py using:
 
-Login into Huggingface
-```huggingface-cli login```
-Paste your Hugging Face token (can be generated from https://huggingface.co/settings/tokens).
-to paste click " Right click " or ctrl + shift + v
+python
+Copy
+Edit
+from load_qwen_model import load_qwen_model
+This loads the Qwen2.5-Coder model and tokenizer.
 
-Launch the GUI
-```python source_code/ui.py```
-This will display a local IP address in the terminal like:
-Running on http://127.0.0.1:7860
-[Note: if it is aking to download and application click on the link and download it then it will redirect to webpage for the UI implementation ]
+🔹 Step 2: Run the Interface
+Use the command below to start the web UI:
 
+bash
+Copy
+Edit
+python app.py
+You will see something like:
 
-📋 Tips
-If you get an error like ModuleNotFoundError, ensure your paths are correct and Python environment is activated.
+nginx
+Copy
+Edit
+Running on local URL: http://127.0.0.1:7860
+Click the link or open it in your browser.
 
-If the model doesn't load, check your Hugging Face token or internet connection.
+🧠 How the UI Works
+🖊️ Paste your Python code in the text box.
 
-📌 Final Notes
-This model uses a 1.5B parameter LLM, so it's lightweight and runs well on most systems with 8GB+ RAM.
+🤖 The model will detect bugs and suggest fixes.
 
-The model is not fine-tuned for all languages — it mainly works with Python.
+📥 You can copy the fixed code.
 
-✅ Summary of What to Do
-Step	Action
-✅	Clone the repo
-✅	Install dependencies
-✅	Login to Hugging Face
-✅	Run the project using python source_code/ui.py
-✅	Use the web UI for bug detection & fixing
+✅ No need to download anything else. It runs in your browser locally.
 
+📌 Tips
+If you see ModuleNotFoundError, ensure you're in the .venv and all dependencies are installed.
 
-👨‍💻 Credits
+Use app.py to launch the project. Other files are used internally.
+
+🧑‍💻 Credits
 Model: Qwen2.5-Coder-1.5B-Instruct
-GUI: Gradio
+Interface: Gradio
 Developer: Sakthivarshan S
-
 
 
