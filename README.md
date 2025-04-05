@@ -3,7 +3,7 @@ Welcome to the Bug Detection and Fixing AI project! This project uses a powerful
 
 Whether you’re a beginner or a developer, this guide will walk you through everything — from setup to launching the app.
 
-📌 Project Highlights
+# 📌 Project Highlights
 ✅ Detects syntax, logical, and structural bugs
 
 🛠️ Fixes bugs using trained AI
@@ -16,7 +16,7 @@ Whether you’re a beginner or a developer, this guide will walk you through eve
 
 🐍 Works offline in VS Code, or you can host it on Hugging Face
 
-📂 Project Structure
+# 📂 Project Structure
 bash
 Copy
 Edit
@@ -34,45 +34,40 @@ Bug-Detection-and-Fixing-Model/
  
 ⚙️ How to Set Up (Run Locally)
 1. 📥 Clone the Repository
-git clone https://github.com/your-username/Bug-Detection-and-Fixing-Model.git
-cd Bug-Detection-and-Fixing-Model
+```git clone https://github.com/your-username/Bug-Detection-and-Fixing-Model.git```
+```cd Bug-Detection-and-Fixing-Model```
 2. 🐍 Create & Activate Virtual Environment
 # Windows
-python -m venv .venv
-.venv\Scripts\activate
+```python -m venv .venv```
+```.venv\Scripts\activate```
 
 # Mac/Linux
-python3 -m venv .venv
-source .venv/bin/activate
+```python3 -m venv .venv```
+```source .venv/bin/activate```
 3. 📦 Install Requirements
-bash
-Copy
-Edit
-pip install -r requirements.txt
+
+```pip install -r requirements.txt```
+
 🚀 How to Run the Model
 🔹 Step 1: Load the Model
+
 No need to run this manually — it's done automatically inside app.py using:
 
 python
-Copy
-Edit
-from load_qwen_model import load_qwen_model
+```from load_qwen_model import load_qwen_model```
+
 This loads the Qwen2.5-Coder model and tokenizer.
 
 🔹 Step 2: Run the Interface
 Use the command below to start the web UI:
 
-bash
-Copy
-Edit
-python app.py
+```python app.py```
 You will see something like:
 
-nginx
-Copy
-Edit
-Running on local URL: http://127.0.0.1:7860
-Click the link or open it in your browser.
+
+```Running on local URL: http://127.0.0.1:7860```
+ Click the link or open it in your browser.
+ [Note: if it is asking to download and application click on the link and download it then it will redirect to webpage for the UI implementation ]
 
 🧠 How the UI Works
 🖊️ Paste your Python code in the text box.
@@ -87,6 +82,8 @@ Click the link or open it in your browser.
 If you see ModuleNotFoundError, ensure you're in the .venv and all dependencies are installed.
 
 Use app.py to launch the project. Other files are used internally.
+
+and also the main and all the works done in the project is given in the report in the document folder
 
 🧑‍💻 Credits
 Model: Qwen2.5-Coder-1.5B-Instruct
