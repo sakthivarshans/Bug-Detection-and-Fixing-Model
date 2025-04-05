@@ -34,15 +34,9 @@ Bug-Detection-and-Fixing-Model/
  
 ⚙️ How to Set Up (Run Locally)
 1. 📥 Clone the Repository
-bash
-Copy
-Edit
 git clone https://github.com/your-username/Bug-Detection-and-Fixing-Model.git
 cd Bug-Detection-and-Fixing-Model
 2. 🐍 Create & Activate Virtual Environment
-bash
-Copy
-Edit
 # Windows
 python -m venv .venv
 .venv\Scripts\activate
