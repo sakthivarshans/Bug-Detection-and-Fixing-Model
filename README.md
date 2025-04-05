@@ -85,9 +85,9 @@ Use app.py to launch the project. Other files are used internally.
 
 and also the main and all the works done in the project is given in the report in the document folder
 
-🧑‍💻 Credits
-Model: Qwen2.5-Coder-1.5B-Instruct
-Interface: Gradio
+# 🧑‍💻 Credits
+Model: Qwen2.5-Coder-1.5B-Instruct  
+Interface: Gradio  
 Developer: Sakthivarshan S
 
 
